@@ -1,0 +1,30 @@
+<% if(typeof errors != 'undefined'){ %>
+<% errors.forEach(function(error) { %>
+<script type="text/javascript">
+  var errorToastEl = document.getElementById('errorToast')
+  var errorToast = bootstrap.Toast.getOrCreateInstance(errorToastEl) // Returns a Bootstrap toast instance
+  errorToast.show();
+</script>
+<% }); %>
+<% } %>
+<% if(success_msg != ''){ %>
+<script type="text/javascript">
+  var successToastEl = document.getElementById('successToast')
+  var successToast = bootstrap.Toast.getOrCreateInstance(successToastEl) // Returns a Bootstrap toast instance
+  successToast.show();
+</script>
+<% } %>
+<% if(error_msg != ''){ %>
+<script type="text/javascript">
+  var warningToastEl = document.getElementById('warningToast')
+  var warningToast = bootstrap.Toast.getOrCreateInstance(warningToastEl) // Returns a Bootstrap toast instance
+  warningToast.show();
+</script>
+<% } %>
+<% if(error != ''){ %>
+<script type="text/javascript">
+  var infoToastEl = document.getElementById('infoToast')
+  var infoToast = bootstrap.Toast.getOrCreateInstance(infoToastEl) // Returns a Bootstrap toast instance
+  infoToast.show();
+</script>
+<% } %>
